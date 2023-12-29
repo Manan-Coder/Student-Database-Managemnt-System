@@ -1,15 +1,12 @@
 from tkinter import *
 from tkinter import messagebox
 import webbrowser
-import os
-import PyPDF2
 from reportlab.pdfgen import canvas
 #from ttkbootstrap.constants import *
 from ttkbootstrap.dialogs import Querybox
 from datetime import date
 import mysql.connector
 import ttkbootstrap as tk
-from PIL import ImageTk
 
 connection = mysql.connector.connect(host="localhost",user="root",password="",database="flask")
 my_cursor = connection.cursor()
@@ -28,7 +25,6 @@ root.title("Student Database Management System")
 root.geometry("900x700")
 lb = tk.Label(root,text="STUDENT DATABASE MANAGEMENT SYSTEM",font=("Georgia,Italic",18))
 lb.grid(row=0,column=2,padx=60)
-scl_img = PhotoImage(file="image.gif")
 def insrt():
     def submit():
         global reg
